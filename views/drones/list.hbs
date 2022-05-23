@@ -1,1 +1,23 @@
 <h2>Available drones</h2>
+
+<br>
+
+<div> In the DB we have {{ numberOfDrones }} drones. </div>
+
+<hr>
+
+{{#each allDronesFromDB}}
+
+    <div>
+
+        <h3> <a href="..routes/index.js/{{_id}}"> {{ name }} </a></h3>
+
+        <br>
+
+        <form action="/drones/{{_id}}/delete" method="POST"> 
+        </form>
+    </div>
+
+    <hr>
+
+{{/each}}
